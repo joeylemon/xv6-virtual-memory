@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
       printf(1, "%x %x\n", nullp, *nullp);
 
       // If above code didn't kill this process, the test didn't work
-      printf(1, "TEST FAILED\n");
+      printf(1, "\033[0;31m✗\033[0m null pointer dereference didn't cause trap\n");
       kill(parent);
       exit();
    } else {
@@ -18,6 +18,6 @@ int main(int argc, char **argv) {
    }
 
    // If parent hasn't been killed, the child was killed, meaning test worked
-   printf(1, "TEST PASSED\n");
+   printf(1, "\033[0;32m✔\033[0m null pointer dereference caused trap\n");
    exit();
 }
