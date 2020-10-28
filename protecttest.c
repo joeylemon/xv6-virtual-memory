@@ -9,7 +9,7 @@ main(int argc, char *argv[])
   int parent = getpid();
 
   // Create an address to protect
-  int *val = sbrk(0);
+  char *val = sbrk(0);
 
   // Make sure the process memory size is at least a page
   sbrk(PGSIZE);
