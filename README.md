@@ -1,4 +1,4 @@
-# xv6-scheduler
+# xv6-virtual-memory
 
 This is a copy of the [xv6 repository](https://github.com/mit-pdos/xv6-public) which implements new virtual memory features: a new exception when a program dereferences a null pointer and new syscalls to change the protection levels of pages in a process's address space
 
